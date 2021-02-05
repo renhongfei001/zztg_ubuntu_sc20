@@ -1,0 +1,121 @@
+/* Copyright (c) 2013-2014, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+qcom,palladium-batterydata {
+        qcom,fcc-mah = <4850>;       // zztg 20201126
+	qcom,default-rbatt-mohm = <130>;
+	qcom,rbatt-capacitive-mohm = <80>;
+	qcom,flat-ocv-threshold-uv = <3800000>;
+	qcom,max-voltage-uv = <4200000>;
+	qcom,v-cutoff-uv = <3300000>;	//luffy 20151211 modify shutdown voltage
+	qcom,chg-term-ua = <100000>;
+	qcom,batt-id-kohm = <75>;
+	qcom,battery-type = "palladium_5000mah";
+
+        qcom,fcc-temp-lut {
+                qcom,lut-col-legend = <(-20) 0 25 40 60>;
+                qcom,lut-data = <4820 4840 4850 4840 4820>;
+        };
+
+	qcom,pc-temp-ocv-lut {
+		qcom,lut-col-legend = <(-20) 0 25 40 60>;
+		qcom,lut-row-legend = <100 95 90 85 80>,
+				<75 70 65 60 55>,
+				<50 45 40 35 30>,
+				<25 20 16 13 11>,
+				<10 9 8 7 6>,
+				<5 4 3 2 1>,
+				<0>;
+		qcom,lut-data = <4186 4192 4198 4192 4186>,
+				<4168 4170 4172 4170 4168>,
+				<4150 4152 4154 4152 4150>,
+				<4132 4136 4138 4136 4132>,
+				<4098 4100 4102 4100 4098>,
+				<4080 4082 4084 4082 4080>,
+				<4048 4050 4052 4050 4048>,
+				<4022 4024 4028 4024 4022>,
+				<4008 4010 4012 4010 4008>,
+				<3990 3994 3998 3994 3990>,
+				<3983 3987 3981 3987 3983>,
+				<3954 3958 3962 3958 3954>,
+				<3920 3924 3928 3924 3920>,
+				<3884 3888 3892 3888 3884>,
+				<3868 3872 3876 3872 3868>,
+				<3816 3820 3824 3820 3816>,
+				<3782 3786 3790 3786 3782>,
+				<3768 3672 3776 3772 3768>,
+				<3756 3760 3764 3760 3756>,
+				<3720 3724 3728 3724 3720>,
+				<3684 3688 3692 3688 3684>,
+				<3665 3669 3673 3669 3665>,
+				<3648 3653 3656 3653 3648>,
+				<3616 3620 3624 3620 3616>,
+				<3590 3594 3598 3594 3590>,
+				<3564 3568 3572 3568 3564>,
+				<3538 3542 3546 3542 3538>,
+				<3503 3507 3511 3507 3503>,
+				<3463 3467 3471 3467 3463>,
+				<3420 3424 3428 3424 3420>,
+				<3400 3400 3400 3400 3400>;
+	};
+
+	qcom,rbatt-sf-lut {
+		qcom,lut-col-legend = <(-20) 0 25 40 60>;
+		qcom,lut-row-legend = <100 95 90 85 80>,
+				<75 70 65 60 55>,
+				<50 45 40 35 30>,
+				<25 20 16 13 11>,
+				<10 9 8 7 6>,
+				<5 4 3 2 1>,
+				<0>;
+		qcom,lut-data = <909 216 100 85 84>,
+				<859 238 106 88 86>,
+				<860 237 105 88 86>,
+				<808 239 107 90 88>,
+				<801 234 111 94 90>,
+				<801 230 118 97 92>,
+				<801 224 123 100 95>,
+				<807 221 128 106 99>,
+				<818 221 111 101 97>,
+				<841 225 101 88 87>,
+				<870 229 101 88 87>,
+				<906 235 103 91 90>,
+				<950 243 106 93 93>,
+				<998 253 110 93 96>,
+				<1051 263 113 94 90>,
+				<1116 272 113 91 88>,
+				<1200 275 111 91 88>,
+				<1312 298 108 90 87>,
+				<1430 329 104 88 87>,
+				<1484 351 107 91 89>,
+				<1446 345 110 93 90>,
+				<1398 344 112 94 90>,
+				<1466 358 115 96 91>,
+				<1490 357 117 96 90>,
+				<1589 365 117 94 89>,
+				<1828 379 111 91 88>,
+				<2151 399 111 93 91>,
+				<2621 436 117 98 95>,
+				<3404 496 130 106 100>,
+				<8212 616 150 1906 134>,
+				<135251 124940 59087 49820 29672>;
+	};
+
+	qcom,ibat-acc-lut {
+		qcom,lut-col-legend = <(-20) 0 25>;
+		qcom,lut-row-legend = <0 250 500 1000>;
+		qcom,lut-data = <4820 4840 4850>,
+				<2980 4750 4780>,
+				<380 4500 4750>,
+				<220 3500 4120>;
+	};
+};
