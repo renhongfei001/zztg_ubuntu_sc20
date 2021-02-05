@@ -1,0 +1,17 @@
+./DMAcc/AppID|W7
+./DMAcc/ServerID|com.vzwdmserver
+./DMAcc/Name|VZW DM Server
+./DMAcc/AppAddr/Addr|https://ivzwmdmii.iot.motive.com
+./DMAcc/AppAddr/AddrType|URI
+./DMAcc/AppAddr/Port|443
+./DMAcc/AAuthPref|syncml:auth-md5
+./DMAcc/AppAuth/Client/AAuthLevel|CLCRED
+./DMAcc/AppAuth/Client/AAuthType|DIGEST
+./DMAcc/AppAuth/Client/AAuthName|865067037101550
+./DMAcc/AppAuth/Client/AAuthSecret|
+./DMAcc/AppAuth/Client/AAuthData|11
+./DMAcc/AppAuth/Server/AAuthLevel|SRVCRED
+./DMAcc/AppAuth/Server/AAuthType|DIGEST
+./DMAcc/AppAuth/Server/AAuthName|com.vzwdmserver
+./DMAcc/AppAuth/Server/AAuthSecret|0000000000000000
+./DMAcc/AppAuth/Server/AAuthData|401

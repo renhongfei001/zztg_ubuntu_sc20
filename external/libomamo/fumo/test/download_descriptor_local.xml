@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2016 Verizon. All Rights Reserved.
+-->
+<media xmlns="http://www.openmobilealliance.org/xmlns/dd">
+	<objectURI>file://VZW_Model_123_456.pdf</objectURI>
+    <size>6119</size>
+    <type>application/octet-stream</type>
+    <name>VZW_Model_123_456.pdf</name>
+    <vendor>DM Server Vendor Name Here</vendor>
+    <installParam>estimatedDownloadTimeInSecs=60;estimatedInstallTimeInSecs=15</installParam>
+    <description>Description Here</description>
+	<PreDownloadMessage> line 1
+	line 2
+	line 3</PreDownloadMessage>
+	<PostDownloadMessage> 1024 characters of textgo here </PostDownloadMessage>
+	<PostUpdateMessage> 1024 characters of text gohere </PostUpdateMessage>
+	<PreDownloadURL> URL goes here: http://www.url.com </PreDownloadURL>
+	<PostDownloadURL> URL goes here: http://www.url.com </PostDownloadURL>
+	<PostUpdateURL> URL goes here: http://www.url.com </PostUpdateURL>
+</media>
