@@ -1,0 +1,12 @@
+type ftmdaemon, domain;
+type ftmdaemon_exec, exec_type, file_type;
+init_daemon_domain(ftmdaemon)
+
+
+allow ftmdaemon bluetooth_prop:property_service set;
+allow ftmdaemon rootfs:lnk_file getattr;
+allow ftmdaemon ftmdaemon:capability dac_override;
+allow ftmdaemon diag_device:chr_file { read write open ioctl};
+allow ftmdaemon property_socket:sock_file { read write open ioctl};
+allow ftmdaemon init:unix_stream_socket { connectto};
+allow ftmdaemon smd_device:chr_file { open ioctl read write};

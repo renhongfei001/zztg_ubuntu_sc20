@@ -1,0 +1,30 @@
+type quec, domain;
+type quec_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(quec);
+allow quec servicemanager:binder {transfer call};
+allow quec quec:capability dac_override ;
+
+allow servicemanager quec:dir search;
+allow servicemanager mmi:dir search;
+allow quec sysfs_socinfo:file write ;
+allow servicemanager quec:process getattr;
+allow servicemanager quec:file rw_file_perms;
+allow servicemanager mmi:file rw_file_perms;
+allow servicemanager mmi:binder call;
+allow quec system_server_service:service_manager add;
+allow quec mmi_data_file:dir { search write add_name};
+allow quec mmi_data_file:file { create write open read getattr};
+
+allow mmi quec:binder call;
+allow mmi servicemanager:binder call;
+allow mmi quec_server_service:service_manager find;
+allow servicemanager mmi:process getattr;
+allow untrusted_app quec:binder call;
+allow system_app quec:binder call;
+allow quec smd_device:chr_file {read write};
+allow quec rootfs:lnk_file getattr;
+allow logd mmi:fd use;
+allow quec cache_file:dir search;
+allow quec smd_device:chr_file {open ioctl};

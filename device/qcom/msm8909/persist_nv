@@ -1,0 +1,41 @@
+SC20-CE- /system/etc/wifi/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+SC20-CEPB- /system/etc/wifi/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+SC20-CEPC- /system/etc/wifi/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+SC20-CEPD- /system/etc/wifi/WCNSS_qcom_wlan_nv_cepd_pf.bin
+SC20-CEPE- /system/etc/wifi/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+SC20-CEPF- /system/etc/wifi/WCNSS_qcom_wlan_nv_cepd_pf.bin
+SC20-CEPG-
+SC20-CEPH-
+SC20-CEPI- /system/etc/wifi/WCNSS_qcom_wlan_nv_cepi_pj.bin
+SC20-CEPJ- /system/etc/wifi/WCNSS_qcom_wlan_nv_cepi_pj.bin
+SC20-A- /system/etc/wifi/WCNSS_qcom_wlan_nv_a_au_eu.bin
+SC20-AU- /system/etc/wifi/WCNSS_qcom_wlan_nv_a_au_eu.bin
+SC20-E- /system/etc/wifi/WCNSS_qcom_wlan_nv_e_j_wsc.bin
+SC20-EU- /system/etc/wifi/WCNSS_qcom_wlan_nv_a_au_eu.bin
+SC20-J- /system/etc/wifi/WCNSS_qcom_wlan_nv_e_j_wsc.bin
+WSA /system/etc/wifi/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+WSC /system/etc/wifi/WCNSS_qcom_wlan_nv_e_j_wsc.bin
+#CE /system/etc/wifi/WCNSS_qcom_wlan_nv.bin
+CSA  
+CSB 
+CSC 
+CSD 
+CKA
+
+1a03f95d56ccbd1d32c545cb298553de  device/qcom/msm8909/WCNSS_qcom_wlan_nv_a_au_eu.bin
+8dcbed0cc34de2b203e26ed74215210d  device/qcom/msm8909/WCNSS_qcom_wlan_nv.bin
+8dcbed0cc34de2b203e26ed74215210d  device/qcom/msm8909/WCNSS_qcom_wlan_nv_ce_cepb_pc_pe_wsa.bin
+a22794735a10020f65854a086bc5c9dd  device/qcom/msm8909/WCNSS_qcom_wlan_nv_cepd_pf.bin
+f8c0b8abc145237afe04210d78643ecc  device/qcom/msm8909/WCNSS_qcom_wlan_nv_e_j_wsc.bin
+a086663b9b4dbdc09a6a3d72d0c220c6  device/qcom/msm8909/WCNSS_qcom_wlan_nv_cepi_pj.bin
+
+
+
+
+
+
+
+
+
+
+

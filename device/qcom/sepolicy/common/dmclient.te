@@ -1,0 +1,53 @@
+#
+# Copyright (C) 2016 Verizon. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+type dmclient, domain;
+type dmclient_exec, exec_type, file_type;
+
+# Domain transition
+init_daemon_domain(dmclient)
+
+net_domain(dmclient)
+
+#Allow IPC binding with ServiceManager & System apps
+binder_use(dmclient);
+binder_call(dmclient, system_app);
+binder_call(system_app, dmclient);
+binder_call(dmclient, system_server);
+binder_call(system_server, dmclient);
+binder_call(dmclient, servicemanager);
+allow dmclient omadm_service:service_manager find;
+
+# DAC
+allow dmclient self:capability { dac_override };
+
+# Sockets
+allow dmclient self:udp_socket create_socket_perms;
+allow dmclient self:capability net_raw;
+
+# Data file
+allow dmclient dmclient_data_file:file create_file_perms;
+allow dmclient dmclient_data_file:dir rw_dir_perms;
+
+# Shell popen (temporarily added for FUMO but should be reworked)
+allow dmclient shell_exec:file rx_file_perms;
+# allow read storages
+allow dmclient { mnt_user_file storage_file }:lnk_file read;
+allow dmclient { fuse mnt_user_file storage_file }:dir { search r_dir_perms };
+allow dmclient { fuse mnt_user_file storage_file }:file getattr;
+allow dmclient mnt_media_rw_file:dir search;
+allow dmclient system_file:dir { read open };
+

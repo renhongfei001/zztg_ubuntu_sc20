@@ -1,0 +1,44 @@
+type atfwd_quec, domain;
+type atfwd_quec_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(atfwd_quec)
+
+# Creates/Talks to qmuxd via the qmux_radio socket.
+qmux_socket(atfwd_quec);
+
+#Allow IPC binding with ServiceManager & System apps
+binder_use(atfwd_quec);
+binder_call(atfwd_quec, system_app);
+binder_call(atfwd_quec, servicemanager);
+r_dir_file(atfwd_quec, sysfs_ssr);
+
+allow atfwd_quec init:unix_stream_socket connectto;
+allow atfwd_quec property_socket:sock_file write;
+allow atfwd_quec ctl_default_prop:property_service set;
+
+allow atfwd_quec radio_prop:property_service set;
+
+allow atfwd_quec self:udp_socket create;
+allow atfwd_quec_exec mmi_data_file:dir rw_dir_perms;
+allow atfwd_quec_exec mmi_data_file:file rw_file_perms;
+allow atfwd_quec_exec cache_file:dir rw_dir_perms;
+allow atfwd_quec rootfs:lnk_file getattr;
+allow atfwd_quec sysfs:file  {open read};
+allow atfwd_quec diag_device:chr_file { open read write ioctl};
+allow atfwd_quec atfwd_quec:socket {create write read ioctl};
+allow atfwd_quec cache_file:dir {search open read};
+allow atfwd_quec mmi_data_file:dir search;
+allow atfwd_quec mmi_data_file:file {read open getattr};
+allow atfwd_quec quec:binder call;
+allow atfwd_quec quec_server_service:service_manager find;
+
+allow atfwd_quec system_file:file execute_no_trans;
+allow atfwd_quec wififtmd_prop:property_service set;
+allow atfwd_quec bluetooth_prop:property_service set;
+allow atfwd_quec quec_prop:property_service set;
+allow atfwd_quec smd_device:chr_file { open ioctl read write};
+allow atfwd_quec smd_device:chr_file { open ioctl read write};
+allow atfwd_quec proc:file {read open getattr};
+allow atfwd_quec proc_meminfo:file {read open};
+allow atfwd_quec debugfs:file {read open};
