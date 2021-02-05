@@ -1,0 +1,1 @@
+/home/rhf/sc20/build/soong/bootstrap.bash
